@@ -15,7 +15,9 @@ Developed using the Jetson Nano, this project is a retrained detectnet model usi
 
 The following command is ran in the terminal to run detectnet-snap.py with my retrained model:
 
-detectnet-snap.py --network=ssd/models/FinalProjectModel/ssd-mobilenet.onnx --labels=ssd/data/FinalProjectDataset/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes --overlay=box,labels,conf --threshold=0.4 --snapshots=$IMAGES/Result "$IMAGES/merc-and-honda2.mp4"
+detectnet-snap.py --network=model/ssd-mobilenet.onnx --labels=model/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes --overlay=box,labels,conf --threshold=0.4 --snapshots=Test/Result Test/merc-and-honda2.mp4
+
+To run this model with a custon video, simply upload the .mp4 file to the "Test" folder and run the line above with the following input code: Test/<Your image here>
 
 It is important to set the threshold to a lower value in order to identify some of the harder-to-read license plates that may be farther away or blurry. 
 
@@ -31,3 +33,5 @@ It is important to set the threshold to a lower value in order to identify some 
 ### Works Cited
 
 [1] Hai Quan Tran. 2021. Real-time-Auto-License-Plate-Recognition-with-Jetson-Nano. https://github.com/winter2897/Real-time-Auto-License-Plate-Recognition-with-Jetson-Nano/tree/main. (2023)
+
+I used this repository to install its dataset of license plates images and their annotations. I slightly modified the dataset, making it smaller so that the training process took a reasonable amount of time. This allowed me to train my own custom model.
