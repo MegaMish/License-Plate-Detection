@@ -32,6 +32,22 @@ It is important to set the threshold to a lower value in order to identify some 
 
 [View a video demonstration here](https://youtu.be/cWWUTSatfeA)
 
+## Retraining this model
+1. Download the following dataset: [link](https://drive.google.com/drive/folders/1Rpylr9HywxWN69pFe_AZVq4U5LMpq42L?usp=sharing). This is a modified dataset that was downloaded from the repository mentioned in the works cited [1].
+2. Move the dataset to the followiong repository: jetson-inference/python/training/detection/ssd/data
+3. Create a new folder in the following repository: jetson-inference/python/training/detection/ssd/models. This folder will contain your newly retrained model.
+4. In the terminal, navigate to the jetson-inference directory (cd jetson-inference)
+5. Create a docker environment (./docker/run.sh)
+6. Type your nvidia password when prompted
+7. Navigate to the ssd directory (cd python/training/detection/ssd)
+8. Run the following command to retrain the model with the new dataset: python3 train_ssd.py --dataset-type=voc --data=data/license-plate-detection-dataset --model-dir=models/[yourmodelnamehere] --epochs=30. Increase or decrease the amount of epochs to have better or worse accuracy.
+9. Once this is done, export the retrained model (python3 onnx_export.py --model-dir=models/[yourmodelnamehere])
+10. The model is now retrained with the custom dataset and can be used in other directories outside jetson-inference as shown above in the "Running this project" section.
+
+### Future of this project
+
+1. Use Tessaract to effectively read and display the license plate numbers in the terminal.
+2. Limit snapshots taken to 1 per plate (highest confidence for each)
 
 ### Works Cited
 
@@ -39,7 +55,4 @@ It is important to set the threshold to a lower value in order to identify some 
 
 I used this repository to install its dataset of license plates images and their annotations. I slightly modified the dataset, making it smaller so that the training process took a reasonable amount of time. This allowed me to train my own custom model.
 
-###Future of this project
 
-1. Use Tessaract to effectively read and display the license plate numbers in the terminal.
-2. Limit snapshots taken to 1 per plate (highest confidence for each)
