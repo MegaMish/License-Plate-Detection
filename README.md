@@ -17,7 +17,7 @@ The following command is ran in the terminal to run detectnet-snap.py with my re
 
 detectnet-snap.py --network=model/ssd-mobilenet.onnx --labels=model/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes --overlay=box,labels,conf --threshold=0.4 --snapshots=Test/Result Test/merc-and-honda2.mp4
 
-To run this model with a custon video, simply upload the .mp4 file to the "Test" folder and run the line above with the following input code: Test/<Your image here>
+To run this model with a custon video, simply upload the .mp4 file to the "Test" folder and run the line above with the following input code: Test/[Your image here]
 
 It is important to set the threshold to a lower value in order to identify some of the harder-to-read license plates that may be farther away or blurry. 
 
