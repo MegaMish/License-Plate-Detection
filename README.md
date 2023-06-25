@@ -23,9 +23,11 @@ It is important to set the threshold to a lower value in order to identify some 
 
 ## Running this project
 
-1. Install this modified dataset: [link](https://drive.google.com/drive/folders/1Rpylr9HywxWN69pFe_AZVq4U5LMpq42L?usp=sharing) . Refer to [1] for original, much larger dataset.
-2. Move/copy the dataset into the following directory: 
-3. Make sure to include any required libraries that need to be installed for your project to run.
+1. Clone this github repository onto your nano (git clone https://github.com/MegaMish/License-Plate-Detection)
+2. cd to the "License-Plate-Detection" directory (cd License-Plate-Detection)
+3. Add any and all videos you want to use into the "Test" folder (make sure they are .mp4 files)
+4. Run the following command to use detectnet-snap.py with your video (detectnet-snap.py --network=model/ssd-mobilenet.onnx --labels=model/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes --overlay=box,labels,conf --threshold=0.4 --snapshots=Test/Result Test/[yourvideonamehere].mp4)
+5. View the snap shots of the license plates in the "Results" folder.
 
 [View a video demonstration here](https://youtu.be/UbkkXukGWiA)
 
