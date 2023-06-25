@@ -30,7 +30,7 @@ It is important to set the threshold to a lower value in order to identify some 
 4. Run the following command to use detectnet-snap.py with your video (detectnet-snap.py --network=model/ssd-mobilenet.onnx --labels=model/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes --overlay=box,labels,conf --threshold=0.4 --snapshots=Test/Result Test/[yourvideonamehere].mp4)
 5. View the snap shots of the license plates in the "Results" folder.
 
-[View a video demonstration here](https://youtu.be/UbkkXukGWiA)
+[View a video demonstration here](https://youtu.be/cWWUTSatfeA)
 
 
 ### Works Cited
