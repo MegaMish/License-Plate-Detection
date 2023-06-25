@@ -4,10 +4,11 @@ Police officers often need license plate numbers when patrolling the streets or 
 
 [Original video used in demo](https://imgur.com/XfBhMrt)
 
-[Mercedes License Plate](https://imgur.com/291eQOs)
+The Results:
 
-[Honda License Plate](https://imgur.com/mLaTNps)
+![hndaplate](https://github.com/MegaMish/License-Plate-Detection/assets/36091436/be829e9c-2431-482d-b10a-7fcb70515344)
 
+![mercedesplate](https://github.com/MegaMish/License-Plate-Detection/assets/36091436/d4bb2224-94aa-4110-a2bf-e21f5c62d3e9)
 
 ## The Algorithm
 
