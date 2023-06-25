@@ -38,3 +38,8 @@ It is important to set the threshold to a lower value in order to identify some 
 [1] Hai Quan Tran. 2021. Real-time-Auto-License-Plate-Recognition-with-Jetson-Nano. https://github.com/winter2897/Real-time-Auto-License-Plate-Recognition-with-Jetson-Nano/tree/main. (2023)
 
 I used this repository to install its dataset of license plates images and their annotations. I slightly modified the dataset, making it smaller so that the training process took a reasonable amount of time. This allowed me to train my own custom model.
+
+###Future of this project
+
+1. Use Tessaract to effectively read and display the license plate numbers in the terminal.
+2. Limit snapshots taken to 1 per plate (highest confidence for each)
